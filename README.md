@@ -25,6 +25,7 @@ Make sure these commands are used:
 
 2. Global
 - apm install react (***for Atom IDE only***)
+  - If you get a TokenizedBuffer exception everytime you type, uninstall the package and specifically install this version:       ***apm install react@0.16.2*** 
 - npm install webpack@3.4.0 -g
 - npm install webpack-dev-server@2.5.0 -g
 - npm install eslint -g
