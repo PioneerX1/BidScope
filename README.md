@@ -6,6 +6,8 @@ To get started building your React app, components, etc., simply change the name
 2. package-lock.json
 
 To Start your project:
+- Make sure all global React packges are loaded (see below)
+- install the webpack package: ***npm install webpack@3.4.0 --save-dev***
 - npm run start (see other shortcut commands in the package.json file under scripts)
 - view in http://localhost:8080
 
