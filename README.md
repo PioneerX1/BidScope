@@ -26,6 +26,7 @@ Make sure these commands are used:
 - npm install react-router-dom@4.0.0 --save
 - npm install url-loader@0.6.2 --sav-dev
 - npm install file-loader@1.1.6 --sav-dev
+- npm install uuid@3.2.1
 
 
 2. Global
