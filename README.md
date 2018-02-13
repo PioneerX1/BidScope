@@ -27,6 +27,7 @@ Make sure these commands are used:
 - npm install url-loader@0.6.2 --sav-dev
 - npm install file-loader@1.1.6 --sav-dev
 - npm install uuid@3.2.1
+- npm install moment@2.18.1
 
 
 2. Global
