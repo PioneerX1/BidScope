@@ -2,12 +2,14 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import BidList from './BidList';
+import TeamList from './TeamList';
 import Admin from './Admin';
 import Error404 from './Error404';
 
 class App extends React.Component {
 
   constructor(props) {
+    super(props);
     this.state = {
       masterBidList: []
     };
@@ -20,19 +22,18 @@ class App extends React.Component {
     this.setState({masterBidList: newMasterBidList});
   }
 
-  render(){}
-    return (
+  render(){
+    return(
       <div>
-        {/*stick <Header/> tag here */}
         <Switch>
-          {/*stick tags for other routes/paths/components here */}
-          <Route exact path='/' render={()=><BidList bidList={this.state.masterBidList} />} />
-          <Route path='/admin' render={(props)=><Admin bidList={this.state.masterBidList} />} />
+          <Route exact path='/' render={()=><TeamList teamList={this.state.masterTeamList} />} />
+          // <Route path='/admin' render={(props)=><Admin bidList={this.state.masterBidList} />} />
           <Route component={Error404} />
         </Switch>
       </div>
     );
   }
 }
+
 
 export default App;
