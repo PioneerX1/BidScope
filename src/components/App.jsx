@@ -12,20 +12,29 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTeamList: [],
+      masterTeamList: []
       // masterBidList: []
     };
     this.handleAddingNewBidToList = this.handleAddingNewBidToList.bind(this);
   }
 
   handleAddingNewBidToList(teamName, bidAmount) {
+    console.log("App reached");
     var newMasterTeamList = this.state.masterTeamList.slice();
-    // for(team : newMasterTeamList) {
-    for(var i=0; i < newMasterTeamList.size(); i++) {
-      if (newMasterTeamList[i].teamName === teamName) {
-        newMasterTeamList[i].totalAmount += bidAmount;
-      }
-    }
+    console.log("newMasterTeamList " + this.state.masterTeamList.length);
+    newMasterTeamList.forEach((team) =>
+      console.log(team.teamName + " " + team.totalAmount)
+    );
+    newMasterTeamList.forEach((team) =>
+      team.totalAmount += bidAmount
+    );
+
+    // for(var i=0; i < newMasterTeamList.length; i++) {
+      // newMasterTeamList[i].totalAmount += bidAmount;
+      // if (newMasterTeamList[i].teamName === teamName) {
+      //   newMasterTeamList[i].totalAmount += bidAmount;
+      // }
+    // }
     this.setState({masterTeamList: newMasterTeamList});
     // var newMasterBidList = this.state.masterBidList.slice();
     // newMasterBidList.push(newBid);
@@ -36,7 +45,7 @@ class App extends React.Component {
     return(
       <div>
         <Switch>
-          <Route exact path='/' render={()=><TeamList teamList={this.state.masterTeamList} />} />
+          <Route exact path='/' render={(props)=><TeamList teamList={this.state.masterTeamList} />} />
           <Route path='/admin' render={(props)=><Admin  onNewBidCreation={this.handleAddingNewBidToList}
             />} />
           <Route component={Error404} />

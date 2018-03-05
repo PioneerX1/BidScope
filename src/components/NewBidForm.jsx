@@ -9,8 +9,8 @@ function NewBidForm(props){
   function handleNewBidFormSubmission(event) {
     event.preventDefault();
     props.onNewBidCreation({teamName: _teamName.value, bidAmount: _bidAmount.value});
-    _teamName = '';
-    _bidAmount = '';
+    _teamName.value = '';
+    _bidAmount.value = '';
   }
 
   return(

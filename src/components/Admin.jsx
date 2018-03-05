@@ -11,7 +11,7 @@ function Admin(props) {
     <div>
       <h2>Admin</h2>
       // tags for NewBid, EraseAll, and Modify/Delete needed here
-      <NewBidForm />
+      <NewBidForm onNewBidCreation={props.onNewBidCreation}/>
     </div>
   );
 }

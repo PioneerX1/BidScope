@@ -30,4 +30,8 @@ function TeamList(props) {
   );
 }
 
+TeamList.propTypes = {
+  teamList: PropTypes.array
+}
+
 export default TeamList;
