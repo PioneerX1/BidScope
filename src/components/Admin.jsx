@@ -1,7 +1,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import BidList from './BidList';
+// import BidList from './BidList';
+import NewBidForm from './NewBidForm';
 // need to import new bid creation component(s)??
 
 function Admin(props) {
@@ -10,13 +11,14 @@ function Admin(props) {
     <div>
       <h2>Admin</h2>
       // tags for NewBid, EraseAll, and Modify/Delete needed here
-      <BidList />
+      <NewBidForm />
     </div>
   );
 }
 
 Admin.propTypes = {
-  bidList: PropTypes.array,
+  // bidList: PropTypes.array,
+  onNewBidCreation: PropTypes.func
 };
 
 export default Admin;
